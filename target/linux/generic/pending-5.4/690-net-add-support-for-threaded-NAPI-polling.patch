@@ -50,7 +50,7 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
  };
  
  enum gro_result {
-@@ -2254,6 +2257,26 @@ void netif_napi_add(struct net_device *d
+@@ -2249,6 +2252,26 @@ void netif_napi_add(struct net_device *d
  		    int (*poll)(struct napi_struct *, int), int weight);
  
  /**
@@ -79,7 +79,7 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
   *	@napi: NAPI context
 --- a/net/core/dev.c
 +++ b/net/core/dev.c
-@@ -159,6 +159,7 @@ static DEFINE_SPINLOCK(offload_lock);
+@@ -156,6 +156,7 @@ static DEFINE_SPINLOCK(offload_lock);
  struct list_head ptype_base[PTYPE_HASH_SIZE] __read_mostly;
  struct list_head ptype_all __read_mostly;	/* Taps */
  static struct list_head offload_base __read_mostly;
@@ -87,7 +87,7 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
  
  static int netif_rx_internal(struct sk_buff *skb);
  static int call_netdevice_notifiers_info(unsigned long val,
-@@ -5922,6 +5923,11 @@ void __napi_schedule(struct napi_struct
+@@ -5910,6 +5911,11 @@ void __napi_schedule(struct napi_struct
  {
  	unsigned long flags;
  
@@ -99,7 +99,7 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
  	local_irq_save(flags);
  	____napi_schedule(this_cpu_ptr(&softnet_data), n);
  	local_irq_restore(flags);
-@@ -5969,6 +5975,11 @@ EXPORT_SYMBOL(napi_schedule_prep);
+@@ -5957,6 +5963,11 @@ EXPORT_SYMBOL(napi_schedule_prep);
   */
  void __napi_schedule_irqoff(struct napi_struct *n)
  {
@@ -111,7 +111,7 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
  	____napi_schedule(this_cpu_ptr(&softnet_data), n);
  }
  EXPORT_SYMBOL(__napi_schedule_irqoff);
-@@ -6230,6 +6241,84 @@ static void init_gro_hash(struct napi_st
+@@ -6218,6 +6229,84 @@ static void init_gro_hash(struct napi_st
  	napi->gro_bitmask = 0;
  }
  
