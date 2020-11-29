@@ -23,6 +23,7 @@ disablePkgsList="
 ./feeds/packages/net/https-dns-proxy 
 ./feeds/packages/net/kcptun 
 ./feeds/packages/net/smartdns 
+./feeds/packages/net/xtables-addons 
 ./feeds/luci/applications/luci-app-upnp 
 ./feeds/luci/applications/luci-app-sqm
 "
