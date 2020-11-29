@@ -133,7 +133,7 @@
  	};
  
  	reg_1p8v: regulator-1p8v {
-@@ -101,27 +122,67 @@
+@@ -101,23 +113,82 @@
  };
  
  &eth {
@@ -207,10 +207,43 @@
 +        };
 +};    
 +
- &i2c1 {
- 	pinctrl-names = "default";
- 	pinctrl-0 = <&i2c1_pins>;
-@@ -185,15 +246,28 @@
++				port@1 {
++					reg = <1>;
++					label = "lan2";
++				};
++
++				port@2 {
++					reg = <2>;
++					label = "lan3";
++				};
++
++				port@3 {
++					reg = <3>;
++					label = "lan4";
++				};
++
++				port@4 {
++					reg = <4>;
++					label = "wan";
++				};
++
++				port@6 {
++					reg = <6>;
++					label = "cpu";
++					ethernet = <&gmac0>;
++					phy-mode = "2500base-x";
++
++					fixed-link {
++						speed = <2500>;
++						full-duplex;
++						pause;
++					};
++				};
++			};
+ 		};
+ 	};
+ };
+@@ -185,15 +256,28 @@
  
  &pcie {
  	pinctrl-names = "default";
@@ -240,7 +273,7 @@
  	/* eMMC is shared pin with parallel NAND */
  	emmc_pins_default: emmc-pins-default {
  		mux {
-@@ -460,11 +534,11 @@
+@@ -460,11 +544,11 @@
  };
  
  &sata {
