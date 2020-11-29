@@ -1,10 +1,9 @@
 #/bin/sh
 
 disablePkgsList="
-./feeds/lienol/package/chinadns-ng 
-./feeds/lienol/package/ipt2socks 
+./feeds/pw/chinadns-ng 
+./feeds/pw/ipt2socks 
 ./feeds/lienol/others/luci-app-kcptun 
-./feeds/lienol/lienol/luci-app-ssr-python-pro-server 
 ./package/lean/luci-app-kodexplorer 
 ./package/lean/luci-lib-docker 
 ./package/lean/luci-app-dockerman 
@@ -12,6 +11,7 @@ disablePkgsList="
 ./package/lean/luci-theme-argon 
 ./package/lean/v2ray 
 ./package/lean/v2ray-plugin 
+./package/network/services/dropbear 
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
 ./feeds/packages/utils/ttyd 
@@ -23,7 +23,6 @@ disablePkgsList="
 ./feeds/packages/net/https-dns-proxy 
 ./feeds/packages/net/kcptun 
 ./feeds/packages/net/smartdns 
-./package/network/services/dropbear 
 ./feeds/luci/applications/luci-app-upnp 
 ./feeds/luci/applications/luci-app-sqm
 "
