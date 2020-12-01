@@ -91,3 +91,7 @@
 + 电报 https://t.me/t_homelede  
 + 交流群：QQ 1030484865
 + 交流群2：QQ 807741215
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/xiaoqingfengATGH/HomeLede.svg)](https://starchart.cc/xiaoqingfengATGH/HomeLede)
