@@ -11,6 +11,7 @@ disablePkgsList="
 ./package/lean/luci-theme-argon 
 ./package/lean/v2ray 
 ./package/lean/v2ray-plugin 
+./package/lean/xray 
 ./package/network/services/dropbear 
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
