@@ -3,7 +3,7 @@
 disablePkgsList="
 ./feeds/pw/chinadns-ng 
 ./feeds/pw/ipt2socks 
-./feeds/lienol/others/luci-app-kcptun 
+./feeds/lienol/luci-app-ipsec-server 
 ./package/lean/luci-app-kodexplorer 
 ./package/lean/luci-lib-docker 
 ./package/lean/luci-app-dockerman 
