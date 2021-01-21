@@ -98,6 +98,7 @@ hostapd_common_add_device_config() {
 	config_add_int local_pwr_constraint
 	config_add_string require_mode
 	config_add_boolean legacy_rates
+	config_add_boolean vendor_vht
 	config_add_int cell_density
 
 	config_add_string acs_chan_bias
@@ -116,7 +117,7 @@ hostapd_prepare_device_config() {
 	local base_cfg=
 
 	json_get_vars country country_ie beacon_int:100 dtim_period:2 doth require_mode legacy_rates \
-		acs_chan_bias local_pwr_constraint spectrum_mgmt_required airtime_mode cell_density
+		acs_chan_bias local_pwr_constraint spectrum_mgmt_required airtime_mode cell_density vendor_vht
 
 	hostapd_set_log_options base_cfg
 
@@ -184,6 +185,7 @@ hostapd_prepare_device_config() {
 				set_default rate_list "24000 36000 48000 54000"
 				set_default basic_rate_list "24000"
 			fi
+			[ -n "$vendor_vht" ] && append base_cfg "vendor_vht=$vendor_vht" "$N"
 		;;
 		a)
 			if [ "$cell_density" -eq 1 ]; then
@@ -1379,18 +1381,17 @@ wpa_supplicant_run() {
 	_wpa_supplicant_common "$ifname"
 
 	ubus wait_for wpa_supplicant
-	ubus call wpa_supplicant config_add "{ \
+	local supplicant_pid=$(ubus call wpa_supplicant config_add "{ \
 		\"driver\": \"${_w_driver:-wext}\", \"ctrl\": \"$_rpath\", \
 		\"iface\": \"$ifname\", \"config\": \"$_config\" \
 		${network_bridge:+, \"bridge\": \"$network_bridge\"} \
 		${hostapd_ctrl:+, \"hostapd_ctrl\": \"$hostapd_ctrl\"} \
-		}"
+		}" | jsonfilter -l 1 -e @.pid)
 
 	ret="$?"
 
 	[ "$ret" != 0 ] && wireless_setup_vif_failed WPA_SUPPLICANT_FAILED
 
-	local supplicant_pid=$(ubus call service list '{"name": "wpad"}' | jsonfilter -l 1 -e "@['wpad'].instances['supplicant'].pid")
 	wireless_add_process "$supplicant_pid" "/usr/sbin/wpa_supplicant" 1 1
 
 	return $ret
