@@ -88,9 +88,10 @@
 链接：https://drive.google.com/open?id=1iUDsgh1y5qouP48V61aTsswi3IekscKk
 
 ## 交流
-+ 电报 https://t.me/t_homelede  
-+ 交流群：QQ 1030484865
-+ 交流群2：QQ 807741215
+* [电报群](https://t.me/t_homelede)
+* [QQ群1：1030484865](https://jq.qq.com/?_wv=1027&k=PtlQp9Z9)
+* [QQ群2：807741215](https://jq.qq.com/?_wv=1027&k=z9phzgtx)
+* [QQ群3：1001944162](https://jq.qq.com/?_wv=1027&k=gEADVcI5)
 
 ## Stargazers over time
 
