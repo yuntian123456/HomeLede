@@ -13,6 +13,8 @@ disablePkgsList="
 ./package/lean/v2ray-plugin 
 ./package/lean/xray 
 ./package/lean/luci-app-jd-dailybonus 
+./package/lean/luci-app-docker 
+./feeds/packages/utils/docker-compose 
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
 ./feeds/packages/utils/ttyd 
@@ -20,6 +22,7 @@ disablePkgsList="
 ./feeds/packages/utils/containerd 
 ./feeds/packages/utils/libnetwork 
 ./feeds/packages/utils/tini 
+./feeds/packages/utils/runc 
 ./feeds/packages/net/dnscrypt-proxy2 
 ./feeds/packages/net/https-dns-proxy 
 ./feeds/packages/net/kcptun 
