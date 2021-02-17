@@ -3,7 +3,7 @@
 disablePkgsList="
 ./feeds/pw/chinadns-ng 
 ./feeds/pw/ipt2socks 
-./feeds/lienol/luci-app-ipsec-server 
+./feeds/lienol/luci-app-softethervpn 
 ./package/lean/luci-app-kodexplorer 
 ./package/lean/luci-lib-docker 
 ./package/lean/luci-app-dockerman 
@@ -14,6 +14,8 @@ disablePkgsList="
 ./package/lean/xray 
 ./package/lean/luci-app-jd-dailybonus 
 ./package/lean/luci-app-docker 
+./package/lean/softethervpn5 
+./package/lean/luci-app-softethervpn 
 ./feeds/packages/utils/docker-compose 
 ./feeds/packages/net/miniupnpd 
 ./feeds/packages/net/mwan3 
@@ -27,6 +29,7 @@ disablePkgsList="
 ./feeds/packages/net/kcptun 
 ./feeds/packages/net/smartdns 
 ./feeds/packages/net/xtables-addons 
+./feeds/packages/net/softethervpn5 
 ./feeds/luci/applications/luci-app-sqm
 "
 
