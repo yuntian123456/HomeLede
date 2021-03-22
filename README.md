@@ -5,7 +5,7 @@
 [4]: https://github.com/xiaoqingfengATGH/HomeLede/pulls
 [5]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg
 [6]: https://github.com/xiaoqingfengATGH/HomeLede/issues/new
-[7]: https://img.shields.io/badge/release-v2020.09.05-orange.svg?
+[7]: https://img.shields.io/badge/release-v2021.03.20-gold.svg?
 [8]: https://github.com/xiaoqingfengATGH/HomeLede/releases
 [10]: https://img.shields.io/badge/Contact-telegram-blue
 [11]: https://t.me/t_homelede
@@ -17,7 +17,7 @@
 
 [固件使用说明](https://github.com/xiaoqingfengATGH/HomeLede/wiki)
 
-+ 基于Lede OpenWrt，多款HomeLede原创软件及Lienol等作者软件包（Feed）
++ 基于Lede OpenWrt，多款HomeLede原创软件及若干第三方软件包（Feed）
 + 结合家庭x86软路由场景需要定制
 + 按照家庭应用场景对固件及软件进行测试（x86），通过后发布
 
@@ -37,6 +37,7 @@
 + 支持远程唤醒（WOL，从因特网连入路由器启动家中电脑）
 + 支持定时唤醒（Time WOL，定时启动家庭设备，配合自动关机实现定时运行）
 + 支持全功能Docker，可自由扩展功能（可安装目前还没有移植到OpenWrt上的软件）
++ 端口转发工具，支持IPv4及IPv6，TCP/UDP协议转发，支持Docker环境下运行
 + 支持SFTP（可通过常见SSH客户端随意向路由传输文件，而不需要通过Web界面）
 + 预置虚拟化Agent（优化在虚拟化环境中运行速度，默认OpenVMTools，以软件包形式提供QEMU Agent）
 + 支持网络访问管控（基于MAC黑白名单，按访问网站地址，按时间段控制）
